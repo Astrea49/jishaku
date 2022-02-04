@@ -99,18 +99,18 @@ with open(ROOT / 'README.md', 'r', encoding='utf-8') as f:
 
 
 setup(
-    name='jishaku',
+    name='jishaku-nexcord',
     author='Devon (Gorialis) R',
-    url='https://github.com/Gorialis/jishaku',
+    url='https://github.com/Astrea49/jishaku',
 
     license='MIT',
-    description='A discord.py extension including useful tools for bot development and debugging.',
+    description='A nextcord extension including useful tools for bot development and debugging.',
     long_description=README,
     long_description_content_type='text/markdown',
     project_urls={
         'Documentation': 'https://jishaku.readthedocs.io/en/latest/',
-        'Code': 'https://github.com/Gorialis/jishaku',
-        'Issue tracker': 'https://github.com/Gorialis/jishaku/issues'
+        'Code': 'https://github.com/Astrea49/jishaku',
+        'Issue tracker': 'https://github.com/Astrea49/jishaku/issues'
     },
 
     version=VERSION,
@@ -121,7 +121,7 @@ setup(
 
     extras_require=EXTRA_REQUIRES,
 
-    download_url='https://github.com/Gorialis/jishaku/archive/{}.tar.gz'.format(VERSION),
+    download_url='https://github.com/Astrea49/jishaku/archive/{}.tar.gz'.format(VERSION),
 
     keywords='jishaku discord.py discord cog repl extension',
     classifiers=[

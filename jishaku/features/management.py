@@ -17,8 +17,8 @@ import time
 import traceback
 from urllib.parse import urlencode
 
-import discord
-from discord.ext import commands
+import nextcord
+from nextcord.ext import commands
 
 from jishaku.features.baseclass import Feature
 from jishaku.flags import Flags
@@ -114,7 +114,7 @@ class ManagementFeature(Feature):
         """
 
         scopes = ('bot', 'applications.commands')
-        permissions = discord.Permissions()
+        permissions = nextcord.Permissions()
 
         for perm in perms:
             if perm not in dict(permissions):
@@ -131,7 +131,7 @@ class ManagementFeature(Feature):
         }
 
         return await ctx.send(
-            f"Link to invite this bot:\n<https://discordapp.com/oauth2/authorize?{urlencode(query, safe='+')}>"
+            f"Link to invite this bot:\n<https://nextcordapp.com/oauth2/authorize?{urlencode(query, safe='+')}>"
         )
 
     @Feature.Command(parent="jsk", name="rtt", aliases=["ping"])

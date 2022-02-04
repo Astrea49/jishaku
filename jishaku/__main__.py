@@ -20,8 +20,8 @@ import sys
 import typing
 
 import click
-import discord
-from discord.ext import commands
+import nextcord
+from nextcord.ext import commands
 
 LOG_FORMAT: logging.Formatter = logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s')
 LOG_STREAM: logging.Handler = logging.StreamHandler(stream=sys.stdout)
@@ -40,9 +40,9 @@ def entrypoint(intents: typing.Iterable[str], token: str):
     logger.setLevel(logging.DEBUG)
     logger.addHandler(LOG_STREAM)
 
-    intents_class = discord.Intents.default()
-    all_intents = [name for name, _ in discord.Intents.all()]
-    default_intents = [name for name, value in discord.Intents.default() if value]
+    intents_class = nextcord.Intents.default()
+    all_intents = [name for name, _ in nextcord.Intents.all()]
+    default_intents = [name for name, value in nextcord.Intents.default() if value]
 
     for intent in intents:
         if not intent.startswith(('+', '-')):
@@ -56,7 +56,7 @@ def entrypoint(intents: typing.Iterable[str], token: str):
         if name in all_intents:
             setattr(intents_class, name, value)
         elif name == 'all':
-            intents_class = discord.Intents.all() if value else discord.Intents.none()
+            intents_class = nextcord.Intents.all() if value else nextcord.Intents.none()
         elif name == 'default':
             for default_intent in default_intents:
                 setattr(intents_class, default_intent, value)

@@ -13,11 +13,12 @@
     <img src=".github/assets/jishaku_logo.svg" height="36">
 </sub>
 &nbsp;
-jishaku
+jishaku-nextcord
 </h1>
 <p align="center">
 <sup>
-a debugging and utility extension for discord.py bots
+a debugging and utility extension for nextcord bots
+(Astrea does not claim ownership of jishaku - this is just a dirty port of jishaku)
 </sup>
 <br>
 <sup>
@@ -48,7 +49,7 @@ One of jishaku's core philosophies is to be dynamic and easy-to-use. Here's the 
 
 > 1. Download jishaku on the command line using pip:
 > ```bash
-> pip install -U jishaku
+> pip install -U git+https://github.com/Astrea49/jishaku.git
 > ```
 > 2. Load the extension in your bot code before it runs:
 > ```python
@@ -238,35 +239,6 @@ You can also import the module to use the command development utilities.
         </td>
     </tr>
 </table>
-
-## Installing development versions
-
-If you'd like to test the latest versions of jishaku, you can do so by downloading from the git hosts instead of from PyPI.
-
-> From GitHub:
-> ```bash
-> pip install -U "jishaku @ git+https://github.com/Gorialis/jishaku@master"
-> ```
-> From GitLab:
-> ```bash
-> pip install -U "jishaku @ git+https://gitlab.com/Gorialis/jishaku@master"
-> ```
-
-Please note that the new 2020 dependency resolver now no longer discounts git package sources from reinstall prevention,
-which means that if you are installing the jishaku development version multiple times within the same version target you may run into pip just discarding the update.
-
-If you run into such a problem, you can force jishaku to be reinstalled like this:
-
-> From GitHub:
-> ```bash
-> pip install -U --force-reinstall "jishaku @ git+https://github.com/Gorialis/jishaku@master"
-> ```
-> From GitLab:
-> ```bash
-> pip install -U --force-reinstall "jishaku @ git+https://gitlab.com/Gorialis/jishaku@master"
-> ```
-
-You **must** have installed jishaku with one of the commands above before doing this else you will probably end up with a broken installation.
 
 ## Acknowledgements
 

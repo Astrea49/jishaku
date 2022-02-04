@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
 """
-jishaku
+jishaku-nextcord
 ~~~~~~~
 
-A discord.py extension including useful tools for bot development and debugging.
+A nextcord extension including useful tools for bot development and debugging.
 
-:copyright: (c) 2021 Devon (Gorialis) R
+:copyright: (c) 2021 Devon (Gorialis) R (adjusted for nextcord by Astrea49)
 :license: MIT, see LICENSE for more details.
 
 """
